@@ -3,6 +3,10 @@
     margin:0;
     padding:0;
 }
+@font-face {
+    font-family: "DS-Digital";
+    src: url("../fonts/Ds-digib.ttf");
+}
 body {
     background-color:#bababa;
     background-image: -webkit-radial-gradient(600px 300px, circle, #ffffff, #bababa 60%);
@@ -59,8 +63,9 @@ footer .stuts span {
 h3 {
     text-align:center;
 }
-/* tutorial styles */
 #scene {
-    background-image:url(../images/01.jpg);
+    background-image:url(../images/01.png);
     position:relative;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
