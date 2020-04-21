@@ -1,0 +1,422 @@
+/*
+ * The player information
+ *
+ */
+{
+    "email": "email@dispostable.com",
+    "username": "username",
+    "games_under_way": "2",
+    "games_completed": "5",
+    "games": [
+        {
+            "id": "0001",
+            "start_date":"2020-01-12T13:14:15Z",
+        },
+        {
+            "id": "0002",
+          	"start_date":"2020-01-12T13:14:15Z",
+        }
+    ],
+    "rank": "13"
+}
+
+/*
+ * The game information
+ *
+ * - status: ongoing, completed-with-victory, completed-with-defeat
+ *
+ */
+{
+    "game": {
+        "id": "0001",
+        "start_date":"2020-01-12T13:14:15Z",
+        "status": "ongoing",
+        "virus": "covid",
+        "vaccine_progress": 0,
+        "map": {
+            "name": "Europa",
+            "medical_supplies": 0,
+            "money": 200000000,
+            "regions": [
+                {
+                    "name": "Portugal",
+                    "borders": "open",
+                    "population_total": 2000000,
+                    "population": [
+                        {
+                            "type": "civilians",
+                            "mobility": true,
+                            "happiness": 2,
+                            "healthy": 1000000,
+                            "assymptomatic": 0,
+                            "mild_symptoms": 0,
+                            "severe_symptoms": 0,
+                            "dead": 0
+                        },
+                        {
+                            "type": "doctors",
+                            "mobility": false,
+                            "happiness": 2,
+                            "healthy": 300000,
+                            "assymptomatic": 0,
+                            "mild_symptoms": 0,
+                            "severe_symptoms": 0,
+                            "dead": 0
+                        },
+                        {
+                            "type": "policemen",
+                            "mobility": false,
+                            "happiness": 2,
+                            "healthy": 400000,
+                            "assymptomatic": 0,
+                            "mild_symptoms": 0,
+                            "severe_symptoms": 0,
+                            "dead": 0
+                        },
+                        {
+                            "type": "scientists",
+                            "mobility": false,
+                            "happiness": 2,
+                            "healthy": 300000,
+                            "assymptomatic": 0,
+                            "mild_symptoms": 0,
+                            "severe_symptoms": 0,
+                            "dead": 0
+                        }
+                    ],
+                    "buidings": [
+                        {
+                            "hospital": {
+                                "name": "O meu hospital preferido",
+                                "level": 1,
+                                "build_requirements": [
+                                    {
+                                        "money": 1000000
+                                    },
+                                    {
+                                        "doctors": 20
+                                    }
+                                ],
+                                "rooms": [
+                                    {
+                                        "assymptomatic": {
+                                            "max_capacity": 1000,
+                                            "civilians": 10,
+                                            "doctors": 1,
+                                      	     "policemen": 0,
+                                      	      "scientists": 0,
+                                        }
+                                    },
+                                  	{
+                                        "mild_symptoms": {
+                                            "max_capacity": 500,
+                                            "civilians": 100,
+                                            "doctors": 10,
+                                  			"policemen": 0,
+                                  			"scientists": 0,
+                                        }
+                                    },
+                                    {
+                                        "severe_symptoms": {
+                                            "max_capacity": 50,
+                                            "civilians": 10,
+                                            "doctors": 5,
+                                  			"policemen": 0,
+                                  			"scientists": 0,
+                                        }
+                                    },
+                                ],
+                                "contribution": {
+                                    "virus": [
+                                        {
+                                            "severity": -1
+                                        },
+                                        {
+                                            "lethality": -1
+                                        }
+                                    ],
+                                    "population": [
+                                        {
+                                            "happiness": 1
+                                        }
+                                    ],
+                                    "materials": []
+                                },
+                                "actions": [
+                                    {
+                                        "none": {
+                                            "active": false,
+                                            "requirements": [],
+                                            "contribution": []
+                                        }
+                                    }
+                                ]
+                            },
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+
+/*
+ * The virus information
+ *
+ * - The difficulty is in with virus the player is fighting against.
+ *
+ */
+{
+    "viruses": [
+        {
+            "covid": {
+              	"description": "A simple description of the virus",
+              	"origin": "The virus origin",
+              	"history": "Virus history with links to outside sites.",
+                "base_params": {
+                    "infectivity": 10,
+                    "lethality": 3,
+                    "severity": 6
+                }
+            },
+            "swine_flu": {
+              	"description": "A simple description of the virus",
+              	"origin": "The virus origin",
+              	"history": "Virus history with links to outside sites.",
+                "base_params": {
+                    "infectivity": 5,
+                    "lethality": 1,
+                    "severity": 3
+                }
+            }
+        }
+    ]
+}
+
+/*
+ * The buildings information
+ *
+ */
+{
+    "buildings": {
+        "hospital": {
+            "name": "my_hospital",
+            "level": 1,
+            "build_requirements": [
+                {
+                    "money": 1000000
+                },
+                {
+                    "doctors": 20
+                }
+            ],
+            "rooms": [
+                {
+                    "type": "assymptomatic",
+                    "max_capacity": 1000,
+                    "civilians": 10,
+                    "doctors": 1,
+              	    "policemen": 0,
+              	    "scientists": 0,
+                },
+              	{
+                    "type": "mild_symptoms",
+                    "max_capacity": 500,
+                    "civilians": 100,
+                    "doctors": 10,
+              			"policemen": 0,
+              			"scientists": 0,
+                },
+                {
+                    "type": "severe_symptoms",
+                    "max_capacity": 50,
+                    "civilians": 10,
+                    "doctors": 5,
+                    "policemen": 0,
+                    "scientists": 0,
+                },
+            ],
+            "contribution": {
+                "virus": [
+                    {
+                        "severity": -1
+                    },
+                    {
+                        "lethality": -1
+                    }
+                ],
+                "population": [
+                    {
+                        "happiness": 1
+                    }
+                ],
+                "materials": []
+            },
+            "actions": [
+                {
+                    "none": {
+                        "active": false,
+                        "requirements": [],
+                        "contribution": []
+                    }
+                }
+            ]
+        },
+        "lab": {
+            "name": "my_lab",
+            "level": 1,
+            "build_requirements": [
+                {
+                    "money": 1000000
+                },
+                {
+                    "scientists": 10
+                }
+            ],
+            "rooms": [],
+            "contribution": {
+                "virus": [
+                    {
+                        "severity": -1
+                    },
+                    {
+                        "lethality": -1
+                    }
+                ],
+                "population": [],
+                "materials": [
+                    {
+                        "medical_supplies": 10
+                    }
+                ]
+            },
+            "actions": [
+                {
+                    "research_vaccine": {
+                        "active": false,
+                        "requirements": [
+                            {
+                                "lab": 2
+                            },
+                            {
+                                "hospital": 2
+                            },
+                            {
+                                "medical_supplies": 20
+                            }
+                        ],
+                        "contribution": {
+                            "virus": [],
+                            "population": [],
+                            "materials": [],
+                            "vaccine_progress": 5
+                        }
+                    }
+                }
+            ]
+        },
+        "police_station": {
+            "name": "my_police_station",
+            "level": 1,
+            "build_requirements": [
+                {
+                    "money": 1000000
+                },
+                {
+                    "policemen": 10
+                }
+            ],
+            "rooms": [],
+            "contribution": {
+                "virus": [],
+                "population": [],
+                "materials": []
+            },
+            "actions": [
+                {
+                    "distribute_masks": {
+                        "active": false,
+                        "requirements": [
+                            {
+                                "police_station": 2
+                            },
+                            {
+                                "medical_supplies": 5
+                            }
+                        ],
+                        "contribution": {
+                            "virus": [
+                                {
+                                    "infectivity": -2
+                                }
+                            ],
+                            "population": [],
+                            "materials": [],
+                            "vaccine_progress": 0
+                        }
+                    }
+                },
+                {
+                    "enforce_quarantine": {
+                        "active": false,
+                        "requirements": [
+                            {
+                                "police_station": 5
+                            },
+                            {
+                                "medical_supplies": 20
+                            }
+                        ],
+                        "contribution": {
+                            "virus": [
+                                {
+                                    "infectivity": -3
+                                }
+                            ],
+                            "population": [
+                                {
+                                    "mobility": -2
+                                },
+                                {
+                                    "happiness": -2
+                                }
+                            ],
+                            "materials": [],
+                            "vaccine_progress": 0
+                        }
+                    }
+                },
+                {
+                    "close_borders": {
+                        "active": false,
+                        "requirements": [
+                            {
+                                "police_station": 10
+                            },
+                            {
+                                "medical_supplies": 40
+                            }
+                        ],
+                        "contribution": {
+                            "virus": [
+                                {
+                                    "infectivity": -4
+                                }
+                            ],
+                            "population": [
+                                {
+                                    "mobility": -2
+                                },
+                                {
+                                    "happiness": -2
+                                }
+                            ],
+                            "materials": [],
+                            "vaccine_progress": 0
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
